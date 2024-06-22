@@ -47,7 +47,7 @@ export default function ItemList(){
     const renderGroupedItems = (groupedItems) => {
         return Object.keys(groupedItems).sort().map((category) => (
             <div key={category}>
-                <h2 className="text-2xl font-bold ml-8 mt-4 mb-2">{category}</h2>
+                <h2 className="text-2xl font-mono ml-4 mt-4 mb-2">{category}</h2>
                 {groupedItems[category].map((eachItem) => (
                     <Item key={eachItem.category} item={eachItem}/>
                 ))}
@@ -75,7 +75,7 @@ export default function ItemList(){
             <section>
                 {/* render */}
                 {sortBy === "groupedCategory" ? renderGroupedItems(groupByCategory(itemArray)) : itemArray.map((eachItem) => (
-                <Item item={eachItem} />))
+                <Item key={eachItem.id} item={eachItem} />))
                 }
             </section>
         </div>
