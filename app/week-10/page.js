@@ -44,7 +44,7 @@ export default function SignInPage(){
                 </div>
             )}
 
-            <Link href="/week-8/shopping-list" className="hover:underline hover:text-blue-400 text-lg m-2"> Shopping List</Link>
+            <Link href="/week-10/shopping-list" className="hover:underline hover:text-blue-400 text-lg m-2"> Shopping List</Link>
         </main>
     )
 }
